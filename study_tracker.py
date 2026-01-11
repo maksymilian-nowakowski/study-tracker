@@ -14,3 +14,9 @@ with open("study_data.txt", "r") as file:
         sessions.append((date, float(hours)))
 
 print(sessions)
+
+total_hours = sum(hours for _, hours in sessions)
+average = total_hours / len(sessions)
+
+print("Total hours studied:", total_hours)
+print("Average per session:", round(average, 2))
